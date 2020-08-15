@@ -1,0 +1,22 @@
+:root {
+  --md-primary-fg-color: #e04698;
+  --md-primary-fg-color--light: #ff7bc9;
+  --md-primary-fg-color--dark: #aa006a;
+}
+
+.md-header {
+  background: linear-gradient(to right, #e04698, #ae56a9, #6d6db5, #388bd5);
+}
+
+.md-tabs {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.1)
+    ),
+    linear-gradient(to right, #e04698, #ae56a9, #6d6db5, #388bd5);
+}
+
+.md-header .md-header-nav__topic {
+  font-weight: 700;
+}

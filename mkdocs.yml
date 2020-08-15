@@ -1,0 +1,30 @@
+site_name: Documentation Center
+site_author: Marquis Kurt
+site_description: The official documentation center for Unscripted projects
+copyright: "Copyright &copy; 2020 Marquis Kurt."
+
+theme:
+  name: material
+  logo: "resources/logo-bubble.svg"
+  font:
+    text: "Inter"
+  palette:
+    accent: "light blue"
+    scheme: "preference"
+  features:
+    - tabs
+    - instant
+
+extra_css:
+  - "https://rsms.me/inter/inter.css"
+  - "stylesheets/uvn.css"
+
+repo_name: "UnscriptedVN/docs"
+repo_url: "https://github.com/UnscriptedVN/docs"
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: true
+  - toc:
+      permalink: true
