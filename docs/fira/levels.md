@@ -1,17 +1,8 @@
 ---
-layout: default
 title: Levels
-nav_order: 4
 ---
 
 # Level Structure
-
-## Table of Contents
-
-{: .no_toc .text-delta}
-
-1. TOC
-   {: toc}
 
 The minigame's level files are a series of markup files using TOML that describe the information about that level, as well as the overall layout of the level's world. Level files have a root key `level` with two subkeys, `map` and `config`.
 
