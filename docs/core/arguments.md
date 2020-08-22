@@ -22,7 +22,7 @@ The arguments should contain a single dictionary at the root, `args`. The follow
 - `use-classic-music`: Whether to use the older-style music, written by Stray Objects
 
 !!! warning
-The `mg-classic-mode` argument will be deprecated in a future core release.
+    The `mg-classic-mode` argument will be deprecated in a future core release.
 
 ## Example
 
