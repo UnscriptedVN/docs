@@ -23,6 +23,7 @@ position in the grid is. There are five possible options:
 - `"COIN"`, which refers to a collectable coin
 - `"EXIT"`, which refers to an exit
 - `"AIR"`, which refers to a space that doesn't have a particular item
+- `"VOID"`, which refers to empty space with no flooring or other materials
 
 In most scenarios, the world itself does not get modified directly since the layout of items in the
 world need to be preserved. The [`CSPlayer`](./player/#csplayer) object in the [`player`](./player/) module of the API handles
@@ -79,9 +80,20 @@ Get the grid of walls in the world.
 
 Get the grid of coins in the world.
 
+!!! danger "Removed"
+    This method was removed in Fira v2.0.0. Use `CSWorld.devices` instead.
+
 #### Returns
 
 - **coins** ([CSWorldGrid](./grid/#csworldgrid)): Grid containing only the coins.
+
+### devices()
+
+Get a grid of the devices in the world.
+
+#### Returns
+
+- **devices** ([CSWorldGrid](./grid/#csworldgrid)): Grid containing only the unpowered devices.
 
 ### exit()
 

@@ -89,13 +89,28 @@ Add an item into the player's inventory at the player's current position.
 If the item does not exist in the world, or the player already has the item in question,
 nothing occurs.
 
+!!! danger "Removed"
+    This method is no longer available since Fira v2.0.0. Use `CSPlayer.toggle` instead.
+
 #### Returns
 
 - **player** ([CSPlayer](#csplayer)): The Player object that committed the collect action. This is useful
   in cases where chaining methods is preferred.
 
-### exit()
+### toggle()
 
-Exit the level, if possible.
+Turn a nearby computer on or off.
 
-If a VM is specified, the VM writer will also close the writer by writing to the VM file.
+If there isn't a device to turn on, nothing occurs.
+
+#### Returns
+
+- **player** ([CSPlayer](#csplayer)): The Player object that committed the toggle action. This is useful
+  in cases where chaining methods is preferred.
+
+### finish()
+
+Finish all instructions and compile the VM code.
+
+!!! warning "Migrating from v1.x"
+    In previous versions of the Fira API, this method was called `exit()`.

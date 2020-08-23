@@ -8,11 +8,15 @@ The minigame's level files are a series of markup files using TOML that describe
 
 ### Configuration Fields
 
-There are three primary fields in the `config` entry of the TOML file:
+There are a few primary fields in the `config` entry of the TOML file:
 
 - `name`: The name of the level
 - `check`: A list of strings containing the requirements for completing the level
+- `bugs`: (Optional) The list of "intentional bugs" to enable in this level
 - `allowed-blocks`: A list of strings containing the allowed blocks that appear in the basic mode editor
+
+!!! warning
+    `allowed_blocks` is deprecated and should not be used in future level configurations.
 
 #### Checks
 
@@ -24,6 +28,12 @@ There are three primary fields in the `config` entry of the TOML file:
 - `move`: Directional movement blocks
 - `collect`: Collect coin clock
 - `exit`: Exit level block
+
+#### Bugs
+
+- `missing-poweron-bind`: The binding for `poweron` to `collect` is missing
+- `collision-checks-fail`: Collisions between walls or other objects is disabled
+- `exit-changes-randomly`: The location for the exit randomly changes
 
 ## Map Construction
 
@@ -41,9 +51,10 @@ There are five acceptable characters to use when creating the layout string:
 
 - `%`: A wall
 - `P`: The player's starting position
-- `.`: A coin to be collected
+- `.`: A desk with a turned off computer
 - `E`: The exit block to stand on
 - <code>&nbsp;</code>: An air block or null space
+- `X`: Void space
 
 ### Limitations
 
@@ -51,7 +62,6 @@ There are a few limitations regarding the world map string:
 
 - There cannot be more than one player or exit in a map.
 - Each line must have the same number of characters to keep a consistent size.
-- Each level should have its own surrounding wall border.
 
 ## Example level configuration
 
