@@ -13,8 +13,8 @@ theme:
     accent: "light blue"
     scheme: "preference"
   features:
-    - tabs
-    - instant
+    - navigation.tabs
+    - navigation.instant
 
 extra_css:
   - "https://rsms.me/inter/inter.css"
