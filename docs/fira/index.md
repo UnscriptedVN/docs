@@ -6,11 +6,8 @@ title: Home
 
 **Fira** is the main backend and API code for the minigame in [Unscripted](https://unscripted.marquiskurt.net), a visual novel about software development. Fira provides many facets of the minigame, including a public API that players can use to code solutions to the minigame puzzles, a configuration and data generator from level files, and a virtual machine that runs low-level code that the minigame processes.
 
-!!! info Preview version
-    The following pages contain the documentation for a preview version of Fira, v2.0.0. If you're looking for v1.x documentation, see [https://fira.marquiskurt.net](https://fira.marquiskurt.net).
-
-!!! warning Under Construction
-    The documentation for Fira v2.0.0 is currently being updated. Proceed with caution.
+!!! warning "Not Available Yet"
+    The Advanced Mode APIs for the minigame are currently not available in the release candidates of Unscripted. They will be made available in a future update.
 
 ---
 
