@@ -1,0 +1,1559 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The official documentation center for Unscripted projects">
+      
+      
+      
+      
+        <meta name="author" content="Marquis Kurt">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>VM - Documentation Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,400i,700%7CJetBrains+Mono&display=fallback">
+        <style>body,input{font-family:"Inter",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"JetBrains Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/uvn.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/ayu.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="light-blue">
+      
+        <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#about-nadiavm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Documentation Center" class="md-header-nav__button md-logo" aria-label="Documentation Center">
+      
+  <img src="../../../resources/logo-bubble.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Documentation Center
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              VM
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+    
+    <a href="../../.." class="md-tabs__link">
+      Welcome
+    </a>
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../../../core/" class="md-tabs__link">
+        Core
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../../../distribution/" class="md-tabs__link">
+        Distribution
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+        
+      
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Fira
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../../../simplechanges/" class="md-tabs__link">
+        Simplechanges
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Documentation Center" class="md-nav__button md-logo" aria-label="Documentation Center">
+      
+  <img src="../../../resources/logo-bubble.svg" alt="logo">
+
+    </a>
+    Documentation Center
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      Core
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Core" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Core
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../core/" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../core/arguments/" class="md-nav__link">
+      Arguments File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../core/build/" class="md-nav__link">
+      Build Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../core/statements/" class="md-nav__link">
+      Custom Statements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../core/themes/" class="md-nav__link">
+      Theming
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../core/utilities/" class="md-nav__link">
+      Common Utilities
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      Distribution
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Distribution" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Distribution
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../distribution/" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../distribution/apple/" class="md-nav__link">
+      Apple
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../distribution/fixed_zipfile/" class="md-nav__link">
+      Fixed ZipFile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../distribution/itch/" class="md-nav__link">
+      Itch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../distribution/plist/" class="md-nav__link">
+      Property Lists
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../distribution/util/" class="md-nav__link">
+      Utilities
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    <label class="md-nav__link" for="nav-4">
+      Fira
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Fira" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Fira
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../gameplay/" class="md-nav__link">
+      Gameplay
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../implementation/" class="md-nav__link">
+      Implementation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../levels/" class="md-nav__link">
+      Levels
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5" checked>
+    <label class="md-nav__link" for="nav-4-5">
+      Api
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Api" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        <span class="md-nav__icon md-icon"></span>
+        Api
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grid/" class="md-nav__link">
+      Grid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../info/" class="md-nav__link">
+      Info
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../player/" class="md-nav__link">
+      Player
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        VM
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      VM
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-nadiavm" class="md-nav__link">
+    About NadiaVM
+  </a>
+  
+    <nav class="md-nav" aria-label="About NadiaVM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine-commands" class="md-nav__link">
+    Virtual Machine Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csminigamewriter" class="md-nav__link">
+    CSMinigameWriter
+  </a>
+  
+    <nav class="md-nav" aria-label="CSMinigameWriter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__init__" class="md-nav__link">
+    __init__
+  </a>
+  
+    <nav class="md-nav" aria-label="__init__">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocarray_name-size1" class="md-nav__link">
+    alloc(array_name, size=1)
+  </a>
+  
+    <nav class="md-nav" aria-label="alloc(array_name, size=1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_1" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bindname-command" class="md-nav__link">
+    bind(name, command)
+  </a>
+  
+    <nav class="md-nav" aria-label="bind(name, command)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#args" class="md-nav__link">
+    Args
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#castname-value" class="md-nav__link">
+    cast(name, value)
+  </a>
+  
+    <nav class="md-nav" aria-label="cast(name, value)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#args_1" class="md-nav__link">
+    Args
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pusharray-index" class="md-nav__link">
+    push(array, index)
+  </a>
+  
+    <nav class="md-nav" aria-label="push(array, index)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_2" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poparray-index" class="md-nav__link">
+    pop(array, index)
+  </a>
+  
+    <nav class="md-nav" aria-label="pop(array, index)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_3" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setvalue" class="md-nav__link">
+    set(value)
+  </a>
+  
+    <nav class="md-nav" aria-label="set(value)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_4" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movedirection" class="md-nav__link">
+    move(direction)
+  </a>
+  
+    <nav class="md-nav" aria-label="move(direction)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_5" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collect" class="md-nav__link">
+    collect()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    add()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub" class="md-nav__link">
+    sub()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mult" class="md-nav__link">
+    mult()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#div" class="md-nav__link">
+    div()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neg" class="md-nav__link">
+    neg()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" class="md-nav__link">
+    exit()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write" class="md-nav__link">
+    write()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../world/" class="md-nav__link">
+      World
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6" >
+    <label class="md-nav__link" for="nav-4-6">
+      Core
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Core" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-6">
+        <span class="md-nav__icon md-icon"></span>
+        Core
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/" class="md-nav__link">
+      Core Utilities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/config/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/data/" class="md-nav__link">
+      Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/grid/" class="md-nav__link">
+      Grid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/template/" class="md-nav__link">
+      Templates
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/vm/" class="md-nav__link">
+      Virtual Machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      Simplechanges
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Simplechanges" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Simplechanges
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../simplechanges/" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../simplechanges/package/" class="md-nav__link">
+      Python Package
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../simplechanges/syntax/" class="md-nav__link">
+      Syntax
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-nadiavm" class="md-nav__link">
+    About NadiaVM
+  </a>
+  
+    <nav class="md-nav" aria-label="About NadiaVM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine-commands" class="md-nav__link">
+    Virtual Machine Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csminigamewriter" class="md-nav__link">
+    CSMinigameWriter
+  </a>
+  
+    <nav class="md-nav" aria-label="CSMinigameWriter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__init__" class="md-nav__link">
+    __init__
+  </a>
+  
+    <nav class="md-nav" aria-label="__init__">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allocarray_name-size1" class="md-nav__link">
+    alloc(array_name, size=1)
+  </a>
+  
+    <nav class="md-nav" aria-label="alloc(array_name, size=1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_1" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bindname-command" class="md-nav__link">
+    bind(name, command)
+  </a>
+  
+    <nav class="md-nav" aria-label="bind(name, command)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#args" class="md-nav__link">
+    Args
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#castname-value" class="md-nav__link">
+    cast(name, value)
+  </a>
+  
+    <nav class="md-nav" aria-label="cast(name, value)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#args_1" class="md-nav__link">
+    Args
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pusharray-index" class="md-nav__link">
+    push(array, index)
+  </a>
+  
+    <nav class="md-nav" aria-label="push(array, index)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_2" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poparray-index" class="md-nav__link">
+    pop(array, index)
+  </a>
+  
+    <nav class="md-nav" aria-label="pop(array, index)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_3" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setvalue" class="md-nav__link">
+    set(value)
+  </a>
+  
+    <nav class="md-nav" aria-label="set(value)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_4" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movedirection" class="md-nav__link">
+    move(direction)
+  </a>
+  
+    <nav class="md-nav" aria-label="move(direction)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arguments_5" class="md-nav__link">
+    Arguments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collect" class="md-nav__link">
+    collect()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    add()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sub" class="md-nav__link">
+    sub()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mult" class="md-nav__link">
+    mult()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#div" class="md-nav__link">
+    div()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neg" class="md-nav__link">
+    neg()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" class="md-nav__link">
+    exit()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write" class="md-nav__link">
+    write()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>VM</h1>
+                
+                <p>The <code>vm</code> submodule contains a public-facing version of the virtual machine author from the Core.
+The VM writer is often used when using the <code>uvn_fira.api.info.MinigameLevel</code> class to quickly write
+virtual machine code in a low-level environment. The writer is an implementation for NadiaVM
+and is supported in the basic and advanced modes of the game.</p>
+<h2 id="about-nadiavm">About NadiaVM<a class="headerlink" href="#about-nadiavm" title="Permanent link">&para;</a></h2>
+<p>NadiaVM is a simple, stack-based virtual machine with a couple of commands. The VM is designed to focus specifically on the minigame’s internal game logic and is not necessarily suitable for general use. NadiaVM files are registered with the file extension .nvm and are typically plain text files with the corresponding instructions.</p>
+<h3 id="virtual-machine-commands">Virtual Machine Commands<a class="headerlink" href="#virtual-machine-commands" title="Permanent link">&para;</a></h3>
+<p>In the NadiaVM, there are several commands that players can use:</p>
+<ul>
+<li><code>alloc (str) (int)</code>: Create a new array with a name and a specific size.</li>
+<li><code>collect</code>: Collect a coin in the world. Acts like a pause in VM.</li>
+<li><code>push (str) (int)</code>: Push the top of the stack to the given array at the index.</li>
+<li><code>pop (str) (int)</code>: Pop the item located at the array's index and move it to the
+  top of the stack.</li>
+<li><code>set constant (any)</code>: Set the top of the stack to a constant value.</li>
+<li><code>move player (str)</code>: Move the player in a given direction.</li>
+<li><code>bind (str) (command)</code>: Makes an alias of the command to the assigned string.</li>
+<li><code>cast (str) (any)</code>: Cast the value to the given name. If a value is already cast to the name, the
+  new value will be used instead of the old one.</li>
+<li><code>exit player</code>: Try to end the execution script and finish the level.</li>
+<li><code>add</code>: Add the two topmost values on the stack.</li>
+<li><code>sub</code>: Subtract the two topmost values on the stack.</li>
+<li><code>mult</code>: Multiply the two topmost values on the stack.</li>
+<li><code>div</code>: Divide the two topmost values on the stack.</li>
+<li><code>neg</code>: Negate the topmost value on the stack. Effectively the same as pushing <code>-1</code> on the stack
+  and calling <code>mult</code>.
+  The VM writer presented here provides abstracted versions of these commands that will be written to
+  the requested path.</li>
+</ul>
+<hr />
+<h2 id="csminigamewriter">CSMinigameWriter<a class="headerlink" href="#csminigamewriter" title="Permanent link">&para;</a></h2>
+<p>A list-based implementation of the NadiaVM file writer.</p>
+<p>This class is similar to CSNadaVMWriter and contains the same methods; however,
+CSNadiaVMWriterBuilder uses a list to store its code rather the string that CSNadiaVMWriter
+uses. This is useful in instances where the builder needs to remove pieces of code or work
+with the current set of instructions as a list.</p>
+<h3 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>instructions</strong> (list): The list of VM commands to write to the VM file.</li>
+</ul>
+<h3 id="__init__">__init__<a class="headerlink" href="#__init__" title="Permanent link">&para;</a></h3>
+<p>Construct the VM writer.</p>
+<h4 id="arguments">Arguments<a class="headerlink" href="#arguments" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>path</strong> (str): The path to the compiled NadiaVM file (<code>.nvm</code>) to write to.</li>
+</ul>
+<h3 id="allocarray_name-size1">alloc(array_name, size=1)<a class="headerlink" href="#allocarray_name-size1" title="Permanent link">&para;</a></h3>
+<p>Allocate a space of memory for a given array.</p>
+<h4 id="arguments_1">Arguments<a class="headerlink" href="#arguments_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>array_name</strong> (str): The name of the array to allocate space for.</li>
+<li><strong>size</strong> (int): The size of the array. Defaults to 1.</li>
+</ul>
+<h3 id="bindname-command">bind(name, command)<a class="headerlink" href="#bindname-command" title="Permanent link">&para;</a></h3>
+<p>Bind the following name to a command.</p>
+<h4 id="args">Args<a class="headerlink" href="#args" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>name</strong> (str): The name to bind a command to.</li>
+<li><strong>command</strong> (str): The command to bind the name to.</li>
+</ul>
+<h3 id="castname-value">cast(name, value)<a class="headerlink" href="#castname-value" title="Permanent link">&para;</a></h3>
+<p>Cast the value to a name.</p>
+<h4 id="args_1">Args<a class="headerlink" href="#args_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>name</strong> (str): The name to cast the value to.</li>
+<li><strong>value</strong> (any): The value to cast the name to.</li>
+</ul>
+<h3 id="pusharray-index">push(array, index)<a class="headerlink" href="#pusharray-index" title="Permanent link">&para;</a></h3>
+<p>Push the top-most item on the current stack to the given array.</p>
+<h4 id="arguments_2">Arguments<a class="headerlink" href="#arguments_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>array</strong> (str): The name of the array to push to.</li>
+<li><strong>index</strong> (int): The index of the array to push to.</li>
+</ul>
+<h3 id="poparray-index">pop(array, index)<a class="headerlink" href="#poparray-index" title="Permanent link">&para;</a></h3>
+<p>Pop the item from the array at a given index and set it at the top
+of the execution stack.</p>
+<h4 id="arguments_3">Arguments<a class="headerlink" href="#arguments_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>array</strong> (str): The array to pop an item from.</li>
+<li><strong>index</strong> (int): The index of the item in the array to pop.</li>
+</ul>
+<h3 id="setvalue">set(value)<a class="headerlink" href="#setvalue" title="Permanent link">&para;</a></h3>
+<p>Set the top of the stack to a constant value.</p>
+<h4 id="arguments_4">Arguments<a class="headerlink" href="#arguments_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>value</strong> (any): The value to create a constant for.</li>
+</ul>
+<h3 id="movedirection">move(direction)<a class="headerlink" href="#movedirection" title="Permanent link">&para;</a></h3>
+<p>Move the player in a given direction.</p>
+<h4 id="arguments_5">Arguments<a class="headerlink" href="#arguments_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>direction</strong> (str): The direction the player will move in.</li>
+</ul>
+<h3 id="collect">collect()<a class="headerlink" href="#collect" title="Permanent link">&para;</a></h3>
+<p>Collect. In the VM, this acts like a pause.</p>
+<h3 id="add">add()<a class="headerlink" href="#add" title="Permanent link">&para;</a></h3>
+<p>Add the two topmost values on the stack.</p>
+<h3 id="sub">sub()<a class="headerlink" href="#sub" title="Permanent link">&para;</a></h3>
+<p>Subtract the two topmost values on the stack.</p>
+<h3 id="mult">mult()<a class="headerlink" href="#mult" title="Permanent link">&para;</a></h3>
+<p>Multiply the two topmost values on the stack.</p>
+<h3 id="div">div()<a class="headerlink" href="#div" title="Permanent link">&para;</a></h3>
+<p>Divide the two topmost values on the stack.</p>
+<h3 id="neg">neg()<a class="headerlink" href="#neg" title="Permanent link">&para;</a></h3>
+<p>Negate the topmost value on the stack.</p>
+<p>Effectively, this is the equivalent of pushing -1 onto the stack and calling <a href="#mult"><code>mult</code></a>.</p>
+<h3 id="exit">exit()<a class="headerlink" href="#exit" title="Permanent link">&para;</a></h3>
+<p>Try to exit the world and end execution of the script.</p>
+<h3 id="write">write()<a class="headerlink" href="#write" title="Permanent link">&para;</a></h3>
+<p>Write the VM code to the requested file.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../player/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Player
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../world/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                World
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 Marquis Kurt.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: ['navigation.tabs', 'navigation.instant'],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+      
+        <script src="../../../scripts/highlight.js"></script>
+      
+    
+  </body>
+</html>
